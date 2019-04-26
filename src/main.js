@@ -9,9 +9,11 @@ import "@/assets/lib/serviceWorker/registerServiceWorker";
 // window全局挂载
 import globalCode from "@/assets/global/globalCode";
 import globalConfig from "@/assets/global/globalConfig";
+import interfaces from "@/interfaces";
 import utils from "@/utils";
 window.globalCode = globalCode;
 window.globalConfig = globalConfig;
+window.interfaces = interfaces;
 window.utils = utils;
 
 // 注入全部filter
