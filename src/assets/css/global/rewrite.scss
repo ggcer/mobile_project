@@ -1,0 +1,22 @@
+/* ------------------------------------------ 重写样式 ------------------------------------------ */
+@import "./vars.scss";
+@import "./functions.scss";
+// message
+.mu-dialog {
+  width: 350px!important;
+}
+
+// slide-picker
+.mu-slide-picker {
+  -webkit-mask-box-image: none;
+  .mu-slide-picker-item {
+    height: px(36);
+    line-height: px(36);
+    padding: 0 px(10);
+    font-size: px(18);
+  }
+  .mu-slide-picker-center-highlight {
+    height: px(36);
+    margin-top: px(-18);
+  }
+}
