@@ -1,5 +1,6 @@
 const GitRevisionPlugin = require("git-revision-webpack-plugin");
 const DefinePlugin = require("webpack").DefinePlugin;
+
 // ------------------webpack插件注入 开始------------------
 const webpackPlugins = [];
 // git版本信息获取
@@ -13,6 +14,7 @@ webpackPlugins.push(
     GIT_BRANCH: JSON.stringify(GIT_BRANCH)
   })
 );
+// ------------------webpack插件注入 结束------------------
 
 // 打包提示
 if (process.env.NODE_ENV == "production") {
@@ -47,6 +49,24 @@ module.exports = {
   configureWebpack: {
     plugins: webpackPlugins
   },
+  // Webpack链，用于配置 loader rules 和 plugins
+  chainWebpack: config => {
+    // scss注入
+    const oneOfsMap = config.module.rule("scss").oneOfs.store;
+    oneOfsMap.forEach(item => {
+      item
+        .use("sass-resources-loader")
+        .loader("sass-resources-loader")
+        .options({
+          resources: [
+            "./src/assets/css/global/functions.scss",
+            "./src/assets/css/global/mixins.scss",
+            "./src/assets/css/global/vars.scss"
+          ]
+        })
+        .end();
+    });
+  },
   // webpack-dev-server 相关配置
   devServer: {
     open: true,
@@ -62,6 +82,6 @@ module.exports = {
     //         changOrigin: true
     //     }
     // },
-    before: app => { }
+    before: app => {}
   }
 };

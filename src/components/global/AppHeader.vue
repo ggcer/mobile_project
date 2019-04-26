@@ -30,7 +30,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/css/global/vars.scss";
 .app-header {
   position: fixed;
   top: 0;

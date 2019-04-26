@@ -14,7 +14,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/css/global/vars.scss";
 .app-content {
   padding: 10px;
 }

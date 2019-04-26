@@ -101,7 +101,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/css/global/functions.scss";
 .picker {
   position: fixed;
   left: 0;
@@ -117,6 +116,7 @@ export default {
     background-color: rgba(0, 0, 0, 0.3);
   }
   .picker-content {
+    position: relative;
     .picker-header {
       padding: 0 px(20);
       height: px(40);

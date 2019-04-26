@@ -24,7 +24,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/css/global/vars.scss";
 .demo-iframe {
   .iframe {
     width: 100%;

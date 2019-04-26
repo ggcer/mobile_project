@@ -89,7 +89,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/css/global/vars.scss";
 .demo-ui {
   .section {
     .header {

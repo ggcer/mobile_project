@@ -15,7 +15,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/css/global/vars.scss";
 .app-page {
   /deep/ .app-content {
     margin-top: $app-header-height;
