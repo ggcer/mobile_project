@@ -47,7 +47,15 @@ module.exports = {
   pluginOptions: {},
   // webpack配置
   configureWebpack: {
-    plugins: webpackPlugins
+    plugins: webpackPlugins,
+    //警告 webpack 的性能提示
+    performance: {
+      hints: "warning",
+      // 入口起点的最大体积(包含首屏的js和css)--单位b(1kb == 1024b)
+      maxEntrypointSize: 1000 * 1024,
+      // 单文件生成文件的最大体积--单位b
+      maxAssetSize: 600 * 1024
+    }
   },
   // Webpack链，用于配置 loader rules 和 plugins
   chainWebpack: config => {
