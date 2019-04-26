@@ -3,11 +3,11 @@ module.exports = {
   env: {
     node: true
   },
-  "globals": {
-    "globalCode": true,
-    "globalConfig": true,
-    "interfaces": true,
-    "utils": true
+  globals: {
+    globalCode: true,
+    globalConfig: true,
+    interfaces: true,
+    utils: true
   },
   extends: ["plugin:vue/essential", "@vue/prettier"],
   rules: {

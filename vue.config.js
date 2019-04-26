@@ -82,6 +82,7 @@ module.exports = {
     //         changOrigin: true
     //     }
     // },
-    before: app => {}
+    // eslint-disable-next-line
+    before: app => { }
   }
 };
