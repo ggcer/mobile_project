@@ -15,6 +15,7 @@ export default {
 
 <style lang="scss" scoped>
 .app-content {
+  background-color: $bg-color;
   padding: 10px;
 }
 </style>

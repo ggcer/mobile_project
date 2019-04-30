@@ -4,7 +4,8 @@ const globalConfig = {
   remToPxRate: 100, //rem转px的比例 100表示1rem转为100px
   isWx:
     window.navigator.userAgent.toLowerCase().match(/MicroMessenger/i) ==
-    "micromessenger" //当前是否为微信
+    "micromessenger", //当前是否为微信
+  timeout: 60 * 1000 // 请求超时时长
 };
 
 export default globalConfig;

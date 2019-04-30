@@ -62,17 +62,34 @@ export default {
   left: 0;
   width: 100%;
   height: 100%;
-  transition: all 0.5s ease;
-}
-.slide-right-enter,
-.slide-left-leave-active {
-  opacity: 0;
-  transform: translate3d(-80%, 0, 0);
+  z-index: 1;
 }
 
-.slide-right-leave-active,
+// 前进
 .slide-left-enter {
-  opacity: 0;
-  transform: translate3d(80%, 0, 0);
+  transform: translate3d(100%, 0, 0);
+}
+.slide-left-enter-active {
+  z-index: 2;
+  transition: all $page-trans-duration ease;
+}
+.slide-left-leave-active {
+  z-index: 0;
+  transform: translate3d(-30%, 0, 0);
+  transition: all $page-trans-duration ease;
+}
+
+// 后退
+.slide-right-enter {
+  transform: translate3d(-30%, 0, 0);
+}
+.slide-right-enter-active {
+  z-index: 0;
+  transition: all $page-trans-duration ease;
+}
+.slide-right-leave-active {
+  z-index: 2;
+  transform: translate3d(100%, 0, 0);
+  transition: all $page-trans-duration ease;
 }
 </style>

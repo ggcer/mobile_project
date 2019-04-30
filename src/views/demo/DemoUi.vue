@@ -13,6 +13,9 @@
         <mu-button class="btn" color="primary" @click="prompt">
           输入弹层
         </mu-button>
+        <mu-button class="btn" color="primary" @click="go('/')">
+          demo 首页
+        </mu-button>
       </section>
 
       <section class="section">
