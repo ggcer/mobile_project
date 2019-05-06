@@ -57,12 +57,18 @@ export default {
 </style>
 <style lang="scss" scoped>
 .router-view {
+  position: relative;
+  z-index: 1;
+}
+.slide-left-enter-active,
+.slide-left-leave-active,
+.slide-right-enter-active,
+.slide-right-leave-active {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
 }
 
 // 前进
