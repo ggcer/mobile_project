@@ -57,6 +57,18 @@ const demo = [
         /* webpackChunkName: "demoLazyload" */ "@/views/demo/DemoLazyload.vue"
       );
     }
+  },
+  {
+    name: "demoStore",
+    path: "/demo/demoStore",
+    meta: {
+      title: "demo Store"
+    },
+    component: () => {
+      return import(
+        /* webpackChunkName: "demoStore" */ "@/views/demo/DemoStore.vue"
+      );
+    }
   }
 ];
 

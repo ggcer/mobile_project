@@ -1,6 +1,20 @@
 /* ------------------------------------------ demo模块 ------------------------------------------ */
 //state：状态
-const state = {};
+const state = {
+  demoInfo: {
+    desc: "i am demo",
+    objList: [
+      {
+        name: "xiaochuan",
+        age: 22
+      },
+      {
+        name: "xiaoming",
+        age: 22
+      }
+    ]
+  }
+};
 
 //getters：类似于state的计算属性
 //接收参数：state
