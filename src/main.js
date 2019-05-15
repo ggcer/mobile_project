@@ -4,8 +4,12 @@ import App from "./views/App.vue";
 import router from "./routers";
 import store from "./stores";
 
+// plugins引入
 // serviceWorker
-import "@/assets/lib/serviceWorker/registerServiceWorker";
+import "@/assets/plugins/serviceWorker";
+// vue eventBus
+import eventBus from "@/assets/plugins/eventBus";
+Vue.use(eventBus);
 
 // window全局挂载
 import globalCode from "@/assets/global/globalCode";

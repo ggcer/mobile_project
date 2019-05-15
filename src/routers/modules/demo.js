@@ -81,6 +81,18 @@ const demo = [
         /* webpackChunkName: "demoStore" */ "@/views/demo/DemoThrottle.vue"
       );
     }
+  },
+  {
+    name: "demoEventBus",
+    path: "/demo/demoEventBus",
+    meta: {
+      title: "demo eventBus"
+    },
+    component: () => {
+      return import(
+        /* webpackChunkName: "demoStore" */ "@/views/demo/DemoEventBus.vue"
+      );
+    }
   }
 ];
 

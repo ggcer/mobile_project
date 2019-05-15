@@ -2,7 +2,7 @@
   <app-page class="demo-throttle">
     <app-header slot="header" title="demo throttle"> </app-header>
     <app-content slot="content">
-      <h4 class="tips">防抖只能包含原生标签</h4>
+      <h4 class="tips">防抖/节流只能包含原生标签</h4>
       <Throttle :time="500" events="click" :isDebounce="true">
         <button @click="handlerClick" class="btn">click 防抖</button>
       </Throttle>
