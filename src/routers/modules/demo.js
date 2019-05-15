@@ -69,6 +69,18 @@ const demo = [
         /* webpackChunkName: "demoStore" */ "@/views/demo/DemoStore.vue"
       );
     }
+  },
+  {
+    name: "demoThrottle",
+    path: "/demo/demoThrottle",
+    meta: {
+      title: "demo throttle"
+    },
+    component: () => {
+      return import(
+        /* webpackChunkName: "demoStore" */ "@/views/demo/DemoThrottle.vue"
+      );
+    }
   }
 ];
 

@@ -15,6 +15,9 @@
         <mu-list-item button :ripple="false" @click="go('/demo/demoStore')">
           <mu-list-item-title>刷新页面不丢失的vuex</mu-list-item-title>
         </mu-list-item>
+        <mu-list-item button :ripple="false" @click="go('/demo/demoThrottle')">
+          <mu-list-item-title>事件防抖与节流</mu-list-item-title>
+        </mu-list-item>
       </mu-list>
     </app-content>
   </app-page>
