@@ -13,7 +13,7 @@ const config = {
   silentResource: false, // 如果你不需要监控资源加载错误，则可以将 silentResource 属性设为 true
   silentHttp: false, // 如果你不需要监控HTTP 请求错误，则可以将 silentHttp 属性设为 true
   silentWebsocket: false, // 如果你不需要监控 WebSocket 连接错误，则可以将 silentWebsocket 属性设为 true
-  silentVideo: false, // 如果你需要录屏功能，则可以将 silentVideo 属性设为 false。silentVideo 的默认值为 true，即默认关闭录屏功能
+  silentVideo: true, // 如果你需要录屏功能，则可以将 silentVideo 属性设为 false。silentVideo 的默认值为 true，即默认关闭录屏功能
   silentBehavior: false, // 如果你不需要记录用户行为，则可以将 silentBehavior 属性设为 true
   silentConsole: true, // fundebug劫持了console(console.log不显示出处), 将silentConsole属性设为 true，可以恢复console
   silentPerformance: false // 如果你不需要报错的时候附带页面性能指标，则可以将 silentPerformance 属性设为 true
