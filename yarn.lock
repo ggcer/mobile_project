@@ -4753,6 +4753,11 @@ fundebug-javascript@^1.8.0:
   resolved "https://registry.yarnpkg.com/fundebug-javascript/-/fundebug-javascript-1.8.0.tgz#bcd794e5ccfe035e193f9fd8f79b73426df19eab"
   integrity sha512-jcUXAMwBvFl1NNsTsKgi08Cdak867hCuyJcfZb0mq2M5I6jf72t+ZVUVWbJdlZl2+KVZi17WB21wPvz+KYcAmA==
 
+fundebug-revideo@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/fundebug-revideo/-/fundebug-revideo-0.4.0.tgz#3852bc7c3978c51da4a30ab4f983ffc45e47cb13"
+  integrity sha512-MDUX+FjzacVP+6K/3JsGOKPIRx3bGbp4zuE+QdYb6vrJcKG7EzdrP4+e7HrUXLZBYDhTh2wa1bY8NRQnJldPtQ==
+
 fundebug-vue@^0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/fundebug-vue/-/fundebug-vue-0.0.1.tgz#aae1a6a0bb580c2da5835f1702fae583e2fe7609"

@@ -13,6 +13,7 @@ Vue.use(eventBus);
 // fundebug
 import fundebugVue from "fundebug-vue";
 import fundebug from "@/assets/plugins/fundebug";
+require("fundebug-revideo");
 if (process.env.NODE_ENV == "production") {
   fundebugVue(fundebug, Vue);
 }
