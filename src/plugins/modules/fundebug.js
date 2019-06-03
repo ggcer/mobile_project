@@ -23,6 +23,6 @@ const config = {
 fundebug = Object.assign(fundebug, config);
 
 // require("fundebug-revideo");
-// if (process.env.NODE_ENV == "production") {
-fundebugVue(fundebug, Vue);
-// }
+if (process.env.NODE_ENV == "production") {
+  fundebugVue(fundebug, Vue);
+}
