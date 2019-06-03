@@ -11,7 +11,11 @@
         />
       </div>
 
-      <h4 class="content-header">图片预览器：设置 preview, preview-text</h4>
+      <h4 class="content-header">
+        图片预览器：设置 preview, preview-text<span style="color: red"
+          >(暂时关闭)</span
+        >
+      </h4>
       <div class="img-wrap">
         <img
           v-for="(item, index) of previewImgSrcList"

@@ -50,9 +50,9 @@ Vue.use(VueLazyload, {
 });
 
 // vue-photo-preview
-import preview from "vue-photo-preview";
-import "vue-photo-preview/dist/skin.css";
-Vue.use(preview);
+// import preview from "vue-photo-preview";
+// import "vue-photo-preview/dist/skin.css";
+// Vue.use(preview);
 
 // 按需引入muse-ui
 import "muse-ui/lib/styles/base.less";
