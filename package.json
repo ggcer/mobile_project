@@ -14,6 +14,8 @@
   "dependencies": {
     "axios": "^0.18.0",
     "core-js": "^2.6.5",
+    "fundebug-javascript": "^1.8.0",
+    "fundebug-vue": "^0.0.1",
     "muse-ui": "^3.0.2",
     "muse-ui-message": "^0.2.1",
     "register-service-worker": "^1.6.2",

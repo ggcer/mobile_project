@@ -21,6 +21,9 @@
         <mu-list-item button :ripple="false" @click="go('/demo/demoEventBus')">
           <mu-list-item-title>eventBus兄弟组件之间传值</mu-list-item-title>
         </mu-list-item>
+        <mu-list-item button :ripple="false" @click="go('/demo/demoFundebug')">
+          <mu-list-item-title>fundebug错误监控</mu-list-item-title>
+        </mu-list-item>
       </mu-list>
     </app-content>
   </app-page>

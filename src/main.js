@@ -10,6 +10,12 @@ import "@/assets/plugins/serviceWorker";
 // vue eventBus
 import eventBus from "@/assets/plugins/eventBus";
 Vue.use(eventBus);
+// fundebug
+import fundebugVue from "fundebug-vue";
+import fundebug from "@/assets/plugins/fundebug";
+if (process.env.NODE_ENV == "production") {
+  fundebugVue(fundebug, Vue);
+}
 
 // window全局挂载
 import globalCode from "@/assets/global/globalCode";

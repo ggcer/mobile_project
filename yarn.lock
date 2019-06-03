@@ -4748,6 +4748,16 @@ functional-red-black-tree@^1.0.1:
   resolved "http://registry.npm.taobao.org/functional-red-black-tree/download/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
+fundebug-javascript@^1.8.0:
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/fundebug-javascript/-/fundebug-javascript-1.8.0.tgz#bcd794e5ccfe035e193f9fd8f79b73426df19eab"
+  integrity sha512-jcUXAMwBvFl1NNsTsKgi08Cdak867hCuyJcfZb0mq2M5I6jf72t+ZVUVWbJdlZl2+KVZi17WB21wPvz+KYcAmA==
+
+fundebug-vue@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/fundebug-vue/-/fundebug-vue-0.0.1.tgz#aae1a6a0bb580c2da5835f1702fae583e2fe7609"
+  integrity sha512-dk6D5FASmvhUwepc5SL6221B9NHw6hZ7ZLU/nWuyRcrBrrOWbxiH30CrEYwr6VK76UlUb6mpJ+Mzr2r7sfqk8w==
+
 gauge@~2.7.3:
   version "2.7.4"
   resolved "http://registry.npm.taobao.org/gauge/download/gauge-2.7.4.tgz#2c03405c7538c39d7eb37b317022e325fb018bf7"

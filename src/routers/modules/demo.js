@@ -93,6 +93,18 @@ const demo = [
         /* webpackChunkName: "demoStore" */ "@/views/demo/DemoEventBus.vue"
       );
     }
+  },
+  {
+    name: "demoFundebug",
+    path: "/demo/demoFundebug",
+    meta: {
+      title: "demo fundebug"
+    },
+    component: () => {
+      return import(
+        /* webpackChunkName: "demoFundebug" */ "@/views/demo/DemoFundebug.vue"
+      );
+    }
   }
 ];
 
