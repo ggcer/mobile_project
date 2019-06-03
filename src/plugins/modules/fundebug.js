@@ -1,6 +1,7 @@
-/* ------------------------------------------ fundebug配置文件 ------------------------------------------ */
-// fundebug
+/* ------------------------------------------ fundebug ------------------------------------------ */
+import Vue from "vue";
 import * as fundebug from "fundebug-javascript";
+import fundebugVue from "fundebug-vue";
 // 配置信息
 const config = {
   apikey: "4a176103118240ed80c2d7ddfdae83f3e0d04d796eda88fe505fb02501e323b2", // key
@@ -20,4 +21,8 @@ const config = {
 };
 // 合并配置信息
 fundebug = Object.assign(fundebug, config);
-export default fundebug;
+
+// require("fundebug-revideo");
+// if (process.env.NODE_ENV == "production") {
+fundebugVue(fundebug, Vue);
+// }

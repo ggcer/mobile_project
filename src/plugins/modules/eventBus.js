@@ -1,3 +1,5 @@
+/* ------------------------------------------ eventBus ------------------------------------------ */
+import Vue from "vue";
 class EventBus {
   constructor(vue) {
     if (!this.handles) {
@@ -43,7 +45,6 @@ class EventBus {
 }
 // 写成Vue插件形式，直接引入然后Vue.use($EventBus)进行使用
 let $EventBus = {};
-
 $EventBus.install = Vue => {
   Vue.prototype.$eventBus = new EventBus(Vue);
   Vue.mixin({
@@ -54,4 +55,4 @@ $EventBus.install = Vue => {
   });
 };
 
-export default $EventBus;
+Vue.use($EventBus);

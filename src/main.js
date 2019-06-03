@@ -4,20 +4,6 @@ import App from "./views/App.vue";
 import router from "./routers";
 import store from "./stores";
 
-// plugins引入
-// serviceWorker
-import "@/assets/plugins/serviceWorker";
-// vue eventBus
-import eventBus from "@/assets/plugins/eventBus";
-Vue.use(eventBus);
-// fundebug
-import fundebugVue from "fundebug-vue";
-import fundebug from "@/assets/plugins/fundebug";
-// require("fundebug-revideo");
-if (process.env.NODE_ENV == "production") {
-  fundebugVue(fundebug, Vue);
-}
-
 // window全局挂载
 import globalCode from "@/assets/global/globalCode";
 import globalConfig from "@/assets/global/globalConfig";
@@ -27,6 +13,9 @@ window.globalCode = globalCode;
 window.globalConfig = globalConfig;
 window.interfaces = interfaces;
 window.utils = utils;
+
+// plugin引入
+import "@/plugins";
 
 // 注入全部filter
 import filters from "@/filters";
