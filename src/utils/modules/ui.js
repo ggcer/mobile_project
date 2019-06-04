@@ -2,17 +2,57 @@
 import Message from "muse-ui-message";
 
 const ui = {
-  // 获取当前屏幕宽度
+  // 获取浏览器视口宽度
   getClientWidth() {
-    return document.documentElement.clientWidth; //当前屏幕宽度
+    let clientWidth = 0;
+    if (document.compatMode == "CSS1Compat") {
+      clientWidth = document.documentElement.clientWidth;
+    } else {
+      clientWidth = document.body.clientWidth;
+    }
+    return clientWidth;
   },
-  // 获取当前屏幕高度
+  // 获取浏览器视口高度
   getClientHeight() {
-    return document.documentElement.clientHeight; //当前屏幕高度
+    let clientHeight = 0;
+    if (document.compatMode == "CSS1Compat") {
+      clientHeight = document.documentElement.clientHeight;
+    } else {
+      clientHeight = document.body.clientHeight;
+    }
+    return clientHeight;
+  },
+  // 获取当前页面总高度
+  getScrollHeight() {
+    let scrollHeight = 0,
+      bodyScrollHeight = 0,
+      documentScrollHeight = 0;
+    if (document.body) {
+      bodyScrollHeight = document.body.scrollHeight;
+    }
+    if (document.documentElement) {
+      documentScrollHeight = document.documentElement.scrollHeight;
+    }
+    scrollHeight =
+      bodyScrollHeight - documentScrollHeight > 0
+        ? bodyScrollHeight
+        : documentScrollHeight;
+    return scrollHeight;
   },
   // 获取当前页面滚动高度
-  getBodyScrollTop() {
-    return document.body.scrollTop || document.documentElement.scrollTop;
+  getScrollTop() {
+    let scrollTop = 0,
+      bodyScrollTop = 0,
+      documentScrollTop = 0;
+    if (document.body) {
+      bodyScrollTop = document.body.scrollTop;
+    }
+    if (document.documentElement) {
+      documentScrollTop = document.documentElement.scrollTop;
+    }
+    scrollTop =
+      bodyScrollTop - documentScrollTop > 0 ? bodyScrollTop : documentScrollTop;
+    return scrollTop;
   },
   // 根据当前屏幕得出canvas绘图比例，防止失真
   getCanvasPixelRatio(context) {
