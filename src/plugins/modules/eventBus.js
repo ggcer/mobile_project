@@ -1,4 +1,6 @@
-/* ------------------------------------------ eventBus ------------------------------------------ */
+/**
+ * eventBus
+ */
 import Vue from "vue";
 class EventBus {
   constructor(vue) {

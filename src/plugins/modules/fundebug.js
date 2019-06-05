@@ -1,4 +1,6 @@
-/* ------------------------------------------ fundebug ------------------------------------------ */
+/**
+ * 错误监控配置文件
+ */
 import Vue from "vue";
 import * as fundebug from "fundebug-javascript";
 import fundebugVue from "fundebug-vue";
