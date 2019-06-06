@@ -1,5 +1,8 @@
+const path = require("path");
 const GitRevisionPlugin = require("git-revision-webpack-plugin");
 const DefinePlugin = require("webpack").DefinePlugin;
+const DllReferencePlugin = require("webpack").DllReferencePlugin;
+const AddAssetHtmlPlugin = require("add-asset-html-webpack-plugin");
 
 // ------------------webpack插件注入 开始------------------
 const webpackPlugins = [];
@@ -7,6 +10,7 @@ const webpackPlugins = [];
 const gitRevisionPlugin = new GitRevisionPlugin();
 const GIT_COMMITHASH = gitRevisionPlugin.commithash();
 const GIT_BRANCH = gitRevisionPlugin.branch();
+// Define
 webpackPlugins.push(
   // 全局变量
   new DefinePlugin({
@@ -14,6 +18,25 @@ webpackPlugins.push(
     GIT_BRANCH: JSON.stringify(GIT_BRANCH)
   })
 );
+// DllReference
+webpackPlugins.push(
+  new DllReferencePlugin({
+    context: process.cwd(),
+    manifest: require("./public/dll/vendor-manifest.json")
+  })
+);
+// AddAssetHtml
+webpackPlugins.push(
+  // 将 dll 注入到 生成的 html 模板中
+  new AddAssetHtmlPlugin({
+    // dll文件位置
+    filepath: path.resolve(__dirname, "./public/dll/*.js"),
+    // dll 引用路径
+    publicPath: "dll",
+    // dll最终输出的目录
+    outputPath: "dll"
+  })
+)
 // ------------------webpack插件注入 结束------------------
 
 // 打包提示
