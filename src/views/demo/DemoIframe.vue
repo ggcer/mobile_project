@@ -1,14 +1,7 @@
 <template>
-  <app-page class="demo-iframe">
-    <app-header slot="header" title="demo iframe"> </app-header>
-    <app-content slot="content">
-      <iframe
-        class="iframe"
-        src="https://muse-ui.org/#/zh-CN/alert"
-        frameborder="0"
-      ></iframe>
-    </app-content>
-  </app-page>
+  <page class="demo-iframe">
+    <iframe class="iframe" src="https://baidu.com" frameborder="0"></iframe>
+  </page>
 </template>
 
 <script>
@@ -28,7 +21,7 @@ export default {
   .iframe {
     width: 100%;
     height: 100%;
-    min-height: calc(100vh - #{$app-header-height} - 20px);
+    min-height: 100vh;
   }
 }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div>当前number: {{ demoNumner }}</div>
+  <div class="event-bus-show">当前number: {{ demoNumner }}</div>
 </template>
 
 <script>
@@ -33,4 +33,8 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.event-bus-show {
+  margin-bottom: 10px;
+}
+</style>

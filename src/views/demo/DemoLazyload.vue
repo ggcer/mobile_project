@@ -1,32 +1,29 @@
 <template>
-  <app-page class="demo-lazy-load">
-    <app-header slot="header" title="demo lazyload"> </app-header>
-    <app-content slot="content">
-      <h4 class="content-header">lazy-load 替换图片的src为v-lazy指令</h4>
-      <div class="img-wrap">
-        <img
-          v-for="(item, index) of lazyloadImgSrcList"
-          :key="index"
-          v-lazy="item"
-        />
-      </div>
+  <page class="demo-lazy-load">
+    <h4 class="content-header">lazy-load 替换图片的src为v-lazy指令</h4>
+    <div class="img-wrap">
+      <img
+        v-for="(item, index) of lazyloadImgSrcList"
+        :key="index"
+        v-lazy="item"
+      />
+    </div>
 
-      <h4 class="content-header">
-        图片预览器：设置 preview, preview-text<span style="color: red"
-          >(暂时关闭)</span
-        >
-      </h4>
-      <div class="img-wrap">
-        <img
-          v-for="(item, index) of previewImgSrcList"
-          :key="index"
-          :preview="index < 3 ? 1 : 2"
-          :src="item"
-          :preview-text="('图片url:' + item) | global_strOmit(30)"
-        />
-      </div>
-    </app-content>
-  </app-page>
+    <h4 class="content-header">
+      图片预览器：设置 preview, preview-text<span style="color: red"
+        >(暂时关闭)</span
+      >
+    </h4>
+    <div class="img-wrap">
+      <img
+        v-for="(item, index) of previewImgSrcList"
+        :key="index"
+        :preview="index < 3 ? 1 : 2"
+        :src="item"
+        :preview-text="('图片url:' + item) | global_strOmit(30)"
+      />
+    </div>
+  </page>
 </template>
 
 <script>
@@ -62,11 +59,13 @@ export default {
 
 <style lang="scss" scoped>
 .demo-lazy-load {
+  padding: 20px;
   .content-header {
-    padding-left: 20px;
+    font-size: 13px;
+    margin-bottom: 10px;
+    font-weight: normal;
   }
   .img-wrap {
-    padding: 20px;
     img {
       width: 100%;
       height: auto;

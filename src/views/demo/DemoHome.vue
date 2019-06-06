@@ -1,39 +1,54 @@
 <template>
-  <app-page class="demo-home">
-    <app-header class="header" slot="header" title="demo home"> </app-header>
-    <app-content class="content" slot="content">
-      <mu-list>
-        <mu-list-item button :ripple="false" @click="go('/demo/demoUi')">
-          <mu-list-item-title>UI相关</mu-list-item-title>
-        </mu-list-item>
-        <mu-list-item button :ripple="false" @click="go('/demo/demoLazyload')">
-          <mu-list-item-title>图片懒加载 + 预览</mu-list-item-title>
-        </mu-list-item>
-        <mu-list-item button :ripple="false" @click="go('/demo/demoIframe')">
-          <mu-list-item-title>iframe</mu-list-item-title>
-        </mu-list-item>
-        <mu-list-item button :ripple="false" @click="go('/demo/demoThrottle')">
-          <mu-list-item-title>事件防抖与节流</mu-list-item-title>
-        </mu-list-item>
-        <mu-list-item button :ripple="false" @click="go('/demo/demoStore')">
-          <mu-list-item-title>刷新页面不丢失的vuex</mu-list-item-title>
-        </mu-list-item>
-        <mu-list-item button :ripple="false" @click="go('/demo/demoEventBus')">
-          <mu-list-item-title>eventBus兄弟组件之间传值</mu-list-item-title>
-        </mu-list-item>
-        <mu-list-item button :ripple="false" @click="go('/demo/demoFundebug')">
-          <mu-list-item-title>fundebug错误监控</mu-list-item-title>
-        </mu-list-item>
-      </mu-list>
-    </app-content>
-  </app-page>
+  <page class="demo-home">
+    <section class="menu-wrap">
+      <p
+        class="menu-line"
+        v-for="(menu, index) of menuList"
+        :key="index"
+        @click="go(menu.path)"
+      >
+        {{ index + 1 }}：{{ menu.desc }}
+      </p>
+    </section>
+  </page>
 </template>
 
 <script>
 export default {
   name: "demoHome",
   data() {
-    return {};
+    return {
+      menuList: [
+        {
+          path: "/demo/demoUi",
+          desc: "UI相关"
+        },
+        {
+          path: "/demo/demoLazyload",
+          desc: "图片懒加载 + 预览"
+        },
+        {
+          path: "/demo/demoIframe",
+          desc: "iframe"
+        },
+        {
+          path: "/demo/demoThrottle",
+          desc: "事件防抖与节流"
+        },
+        {
+          path: "/demo/demoStore",
+          desc: "刷新页面不丢失的vuex"
+        },
+        {
+          path: "/demo/demoEventBus",
+          desc: "eventBus兄弟组件之间传值"
+        },
+        {
+          path: "/demo/demoFundebug",
+          desc: "fundebug错误监控"
+        }
+      ]
+    };
   },
   computed: {},
   mounted() {},
@@ -43,10 +58,15 @@ export default {
 
 <style lang="scss" scoped>
 .demo-home {
-  .content {
-    .btn-wrap {
-      .btn {
-        margin-right: 20px;
+  padding: 20px;
+  .menu-wrap {
+    .menu-line {
+      height: 40px;
+      line-height: 40px;
+      font-size: 13px;
+      color: #4b4b4b;
+      &:not(:last-of-type) {
+        border-bottom: 1px solid #cccccc;
       }
     }
   }

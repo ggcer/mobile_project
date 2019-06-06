@@ -13,18 +13,6 @@ const demo = [
     }
   },
   {
-    name: "demoForm",
-    path: "/demo/demoForm",
-    meta: {
-      title: "form demo"
-    },
-    component: () => {
-      return import(
-        /* webpackChunkName: "demoForm" */ "@/views/demo/DemoForm.vue"
-      );
-    }
-  },
-  {
     name: "demoIframe",
     path: "/demo/demoIframe",
     meta: {

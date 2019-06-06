@@ -1,12 +1,12 @@
 <template>
-  <mu-container class="app-content">
+  <main class="page">
     <slot></slot>
-  </mu-container>
+  </main>
 </template>
 
 <script>
 export default {
-  name: "appContent",
+  name: "page",
   data() {
     return {};
   }
@@ -14,8 +14,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.app-content {
+.page {
+  width: 100vw;
+  min-height: 100vh;
   background-color: $bg-color;
-  padding: 10px;
 }
 </style>

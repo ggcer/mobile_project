@@ -1,11 +1,11 @@
 <template>
-  <div>
-    <mu-button class="btn" color="error" @click="del(1)">
+  <div class="event-bus-delete">
+    <button class="btn" @click="del(1)">
       - 1
-    </mu-button>
-    <mu-button class="btn" color="error" @click="del(10)">
+    </button>
+    <button class="btn" @click="del(10)">
       - 10
-    </mu-button>
+    </button>
   </div>
 </template>
 
@@ -25,4 +25,17 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.event-bus-delete {
+  .btn {
+    margin-right: 20px;
+    margin-bottom: 10px;
+    padding: 5px 10px;
+    line-height: 20px;
+    font-size: 12px;
+    color: white;
+    background: linear-gradient(to right, #ff3333, #f96);
+    box-shadow: 0 0 3px 0.5px #f96;
+  }
+}
+</style>
