@@ -36,7 +36,7 @@ webpackPlugins.push(
     // dll最终输出的目录
     outputPath: "dll"
   })
-)
+);
 // ------------------webpack插件注入 结束------------------
 
 // 打包提示
