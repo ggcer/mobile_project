@@ -18,25 +18,28 @@ webpackPlugins.push(
     GIT_BRANCH: JSON.stringify(GIT_BRANCH)
   })
 );
-// DllReference
-webpackPlugins.push(
-  new DllReferencePlugin({
-    context: process.cwd(),
-    manifest: require("./public/dll/vendor-manifest.json")
-  })
-);
-// AddAssetHtml
-webpackPlugins.push(
-  // 将 dll 注入到 生成的 html 模板中
-  new AddAssetHtmlPlugin({
-    // dll文件位置
-    filepath: path.resolve(__dirname, "./public/dll/*.js"),
-    // dll 引用路径
-    publicPath: "dll",
-    // dll最终输出的目录
-    outputPath: "dll"
-  })
-);
+// dll
+if (process.env.NODE_ENV == "production") {
+  // DllReference
+  webpackPlugins.push(
+    new DllReferencePlugin({
+      context: process.cwd(),
+      manifest: require("./public/dll/vendor-manifest.json")
+    })
+  );
+  // AddAssetHtml
+  webpackPlugins.push(
+    // 将 dll 注入到 生成的 html 模板中
+    new AddAssetHtmlPlugin({
+      // dll文件位置
+      filepath: path.resolve(__dirname, "./public/dll/*.js"),
+      // dll 引用路径
+      publicPath: "dll",
+      // dll最终输出的目录
+      outputPath: "dll"
+    })
+  );
+}
 // ------------------webpack插件注入 结束------------------
 
 // 打包提示
