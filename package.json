@@ -7,9 +7,9 @@
     "build": "vue-cli-service build",
     "report": "vue-cli-service build --report",
     "dll": "webpack -p --progress --config ./webpack.dll.config.js",
-    "dat": "vue-cli-service build --mode dat",
-    "uat": "vue-cli-service build --mode uat",
-    "prd": "vue-cli-service build --mode prd",
+    "build:dat": "vue-cli-service build --mode dat",
+    "build:uat": "vue-cli-service build --mode uat",
+    "build:prd": "vue-cli-service build --mode prd",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
