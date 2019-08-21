@@ -1,4 +1,5 @@
 /* ------------------------------------------ 公共filter ------------------------------------------ */
+
 import globalCode from "@/assets/global/globalCode";
 
 // globalCode code desc map

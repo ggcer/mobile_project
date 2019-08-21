@@ -1,4 +1,5 @@
 /* ------------------------------------------ main.js入口 ------------------------------------------ */
+
 import Vue from "vue";
 import App from "./views/App.vue";
 import router from "./routers";

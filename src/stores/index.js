@@ -1,4 +1,5 @@
-/* ------------------------------------------ store入口 ------------------------------------------ */
+/* ------------------------------------------ stores入口 ------------------------------------------ */
+
 import Vue from "vue";
 import Vuex from "vuex";
 import createPersistedState from "vuex-persistedstate";

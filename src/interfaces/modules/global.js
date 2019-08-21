@@ -1,4 +1,5 @@
 /* ------------------------------------------ global接口 ------------------------------------------ */
+
 const global = {
   statistical: {
     path: "/global/statistical",
