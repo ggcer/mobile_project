@@ -1,4 +1,5 @@
 /* ------------------------------------------ http请求工具类 ------------------------------------------ */
+
 import axios from "axios";
 import globalConfig from "@/assets/global/globalConfig";
 // 请求实例
@@ -10,6 +11,7 @@ const instance = axios.create({
     }
   }
 });
+
 // 请求拦截器
 instance.interceptors.request.use(config => {
   return config;
@@ -20,8 +22,13 @@ instance.interceptors.response.use(response => {
   return response.data;
 });
 
-// http请求类
+/**
+ * post请求方法
+ */
+export const post = () => {};
+
 const http = {
-  post() {}
+  post
 };
+
 export default http;

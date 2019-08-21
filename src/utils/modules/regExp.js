@@ -1,5 +1,6 @@
 /* ------------------------------------------ 正则表达式类 ------------------------------------------ */
-const regExp = {
+
+const regExpMap = {
   require: /^[\s\S]+$/, //非空
   Positive: /^([1-9]\d*|[0]{1,1})$/, //匹配非负整数（正整数 + 0）
   positive: /^[0-9]*[1-9][0-9]*$/, //匹配正整数
@@ -28,6 +29,18 @@ const regExp = {
   money2decimals: /^(\d+(\.\d{1,2})?)?$/, //金额，最多两位小数
   number1decimal: /^(\d+(\.\d?)?)?$/, //数字，最多一位位小数
   number2decimal: /^(\d+(\.\d{1,2})?)?$/ //数字，最多一位小数
+};
+
+/**
+ * 获取正则表达式
+ * @param {*} key 键
+ */
+export const get = key => {
+  return regExpMap[key];
+};
+
+const regExp = {
+  get
 };
 
 export default regExp;
